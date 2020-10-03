@@ -36,13 +36,15 @@ python mycodec_hyper.py compress 'testdata/8iVFB/longdress_vox10_1300.ply' --ckp
 ### **Decoding**
 
 ```
-python mycodec_factorized.py decompress 'compressed/loot_vox10_1200' --ckpt_dir='checkpoints/factorized/a2b3/' --gpu=1```
+python mycodec_factorized.py decompress 'compressed/loot_vox10_1200' --ckpt_dir='checkpoints/factorized/a2b3/' --gpu=1
+```
 or
 ```
 python mycodec_hyper.py decompress 'compressed/longdress_vox10_1300' --ckpt_dir='checkpoints/hyper/a0.75b3/' --gpu=1
 ```
 
 You can also define other options including **output, model, scale, cube_size, gpu, rho**, etc. via the command line.  
+
 #### Examples
 Please refer to `test_factorized.ipynb` and `test_hyper.ipynb` for each step. 
 
