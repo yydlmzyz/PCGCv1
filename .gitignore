@@ -1,0 +1,12 @@
+*.ply
+*.bin
+*.h5
+*.pyc
+testdata
+ckpts
+logs
+__pycache__
+dataprocess/__pycache__
+models/__pycache__
+myutils/__pycache__
+.ipynb_checkpoints
