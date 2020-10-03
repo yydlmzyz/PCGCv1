@@ -24,22 +24,22 @@ Jianqiang Wang, Hao Zhu, Zhan Ma, Tong Chen, Haojie Liu, Qiu Shen.  **[[arXiv]](
 
 ### **Encoding**
 
-```
+```shell
 python mycodec_factorized.py compress 'testdata/8iVFB/loot_vox10_1200.ply' -ckpt_dir='checkpoints/factorized/a2b3/' --gpu=1
 ```
 or
-```
+```shell
 python mycodec_hyper.py compress 'testdata/8iVFB/longdress_vox10_1300.ply' --ckpt_dir='checkpoints/hyper/a0.75b3/' --gpu=1
 ```
 ---
 
 ### **Decoding**
 
-```
+```shell
 python mycodec_factorized.py decompress 'compressed/loot_vox10_1200' --ckpt_dir='checkpoints/factorized/a2b3/' --gpu=1
 ```
 or
-```
+```shell
 python mycodec_hyper.py decompress 'compressed/longdress_vox10_1300' --ckpt_dir='checkpoints/hyper/a0.75b3/' --gpu=1
 ```
 
@@ -54,7 +54,7 @@ Please refer to `test_factorized.ipynb` and `test_hyper.ipynb` for each step.
 The testing on `testdata/` are shown in `eval_factorized.ipynb` and `eval_hyper.ipynb`.
 Or run:
 
-```
+```shell
 python eval_factorized_seqs.py
 python eval_hyper_seqs.py
 ```
@@ -66,12 +66,12 @@ The results can be downloaded in http://yun.nju.edu.cn/f/40578f25c6/ and http://
 #### **Generating training dataset**
 sampling points from meshes, here we use **pyntcloud** (pip install pyntcloud)
 
-```
+```shell
 cd dataprocess
 python mesh2pc.py
 ```
 The output point clouds can be download in http://yun.nju.edu.cn/d/227493a5bd/
-```
+```shell
 python generate_dataset.py
 ```
 the output training dataset can be download in http://yun.nju.edu.cn/d/604927e275/
@@ -79,10 +79,10 @@ the output training dataset can be download in http://yun.nju.edu.cn/d/604927e27
 --- 
 #### **Training**
 
-```
+```shell
 python mytrain_factorized.py --alpha=3
 ```
-```
+```shell
 python mytrain_hyper.py --alpha=3
 ```
 
@@ -93,7 +93,7 @@ You can set **alpha**, **beta**, etc to adjust loss function, and provide a pret
 `results.ipynb`
 ### Qualitative Evaluation
 <center class="half">
-  <img src="figs/redandblack.png?raw=true" height="260" alt="introduction"/> <img src="figs/phil.png?raw=true" height="260" alt="framework"/>
+  <img src="figs/redandblack.png?raw=true" height="260" alt="redandblack"/> <img src="figs/phil.png?raw=true" height="260" alt="phil"/>
 </center>
 
 ## Update
