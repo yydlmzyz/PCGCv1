@@ -1,6 +1,4 @@
 # Copyright (c) Nanjing University, Vision Lab.
-# Jianqiang Wang (wangjq@smail.nju.edu.cn), Hao Zhu, Zhan Ma, Tong Chen, Haojie Liu, Qiu Shen; Nanjing University, Vision Lab.
-# Chaofei Wang; Shanghai Jiao Tong University, Cooperative Medianet Innovation Center.
 # Last update: 2019.09.17
 
 import numpy as np
@@ -42,7 +40,7 @@ def generate_dataset(INPUT_DIR, OUTPUT_DIR, DATA_NUM, cube_size=64):
 
 if __name__ == "__main__":
     VOXEL_SIZE = 64
-    DATA_DIR = '/home/ubuntu/HardDisk1/geometry_training_datasets/shapenet_points255/shapenet_points255_part2/'
+    DATA_DIR = 'shapenet_points255_part2/'# http://yun.nju.edu.cn/f/b2877acf3b/
     print('data direction:', DATA_DIR)
     OUTPUT_DIR ='/home/ubuntu/HardDisk1/points'+str(VOXEL_SIZE)
     if not os.path.exists(OUTPUT_DIR):

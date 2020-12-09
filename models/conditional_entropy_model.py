@@ -1,6 +1,4 @@
 # Copyright (c) Nanjing University, Vision Lab.
-# Jianqiang Wang (wangjq@smail.nju.edu.cn), Hao Zhu, Zhan Ma, Tong Chen, Haojie Liu, Qiu Shen; Nanjing University, Vision Lab.
-# Chaofei Wang; Shanghai Jiao Tong University, Cooperative Medianet Innovation Center.
 # Last update: 2019.10.07
 
 import tensorflow as tf 
@@ -45,6 +43,7 @@ class SymmetricConditional(tf.keras.layers.Layer):
     # CDF.
     upper = inputs + .5
     lower = inputs - .5
+
     sign = tf.math.sign(upper + lower - loc)
     upper = - sign * (upper - loc) + loc
     lower = - sign * (lower - loc) + loc
@@ -111,7 +110,11 @@ class SymmetricConditional(tf.keras.layers.Layer):
 
     loc = tf.expand_dims(loc, -1)
     scale = tf.expand_dims(scale, -1)
+
     likelihood = self._likelihood(a, loc, scale)
+
+
+
     likelihood_bound = tf.constant(self._likelihood_bound, dtype=self.dtype)
     likelihood = tf.maximum(likelihood, likelihood_bound)
     pmf = likelihood
